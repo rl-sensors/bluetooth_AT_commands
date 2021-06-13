@@ -2,6 +2,10 @@
 
 The command mode is necessary to update the baudrate, password, name, etc.
 
+### PlatformIO
+This is a [platformIO](https://platformio.org/) project. But the it should work when converted to an Arduino sketch as well.
+
+### HW Setup
 Most of the online tutorials use HC05 with a switch that allows it to boot in AT command mode, 
 however, the ones sold by Core Electronics don't have this switch.
 
@@ -24,5 +28,15 @@ and sent the following commands:
   3) AT+UART=115200,1,0
 
 Each of the commands should receive response OK (the version command should also return the version)
+
+### Wiring
+The bluetooth module is connected to RX2 and TX2 on the Teensy 4.0 (hence the Serial2 use in the code).
+
+__RX on the HC05 connects to the TX on the Teensy and HC05's TX connect's to the Teensy's RX__
+
+* HC05 RX to PIN8
+* HC05 TX to PIN 7
+* HC05 GDN to GDN
+* HD05 VCC to 3V (should work with 5V as well)
 
 ![Wiring](docs/images/IMG_4015.jpg)
