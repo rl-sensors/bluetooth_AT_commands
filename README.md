@@ -3,7 +3,8 @@
 The command mode is necessary to update the baudrate, password, name, etc.
 
 ### PlatformIO
-This is a [platformIO](https://platformio.org/) project. But the it should work when converted to an Arduino sketch as well.
+This is a [platformIO](https://platformio.org/) project using Teensy 4.0. 
+But the it should work when converted to an Arduino sketch as well.
 
 ### HW Setup
 Most of the online tutorials use HC05 with a switch that allows it to boot in AT command mode, 
